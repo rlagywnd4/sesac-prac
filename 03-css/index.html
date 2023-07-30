@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css 참조방식</title>
+
+    <!-- css 참조방식 3. 링크방식 
+        가장 추천, 효율적 -->
+    <link rel="stylesheet" href="./index.css">
+
+    <!-- css 참조 방식 2. 내장방식
+        해당 html파일에만 적용가능 -> 유지보수성이 떨어짐 -->
+    <style>
+        ul {
+            background-color: pink;
+        }
+    </style>
+
+</head>
+<body>
+    <!-- css 참조방식 3. 인라인 방식
+        장점 : 직관적
+        단점 : html암묵적인 룰에 위배됨(html(구조)과 css(디자인)을 분리해서 작성) -->
+    <h1 style="color: blue;">css 사용법을 익혀보자!</h1>
+
+    <ul>
+        <li>원</li>
+        <li>투</li>
+        <li>쓰리</li>
+    </ul>
+
+    <hr>
+
+    <div style="background-color: red; width: 50px; height: 50px;"></div>
+    <div style="background-color: orange; width: 100px; height: 50px;"></div>
+    <div style="background-color: yellow; width: 150px; height: 50px;"></div>
+    <div style="background-color: green; width: 200px; height: 50px;"></div>
+    <div style="background-color: blue; width: 250px; height: 50px;"></div>
+    <div style="background-color: navy; width: 300px; height: 50px;"></div>
+    <div style="background-color: purple; width: 350px; height: 50px;"></div>
+</body>
+</html>

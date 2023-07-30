@@ -1,0 +1,105 @@
+.div1 {
+    width: 100px;
+    height: 100px;
+    background-color: aquamarine;
+}
+
+/* :hover :요소에 마우스를 올렸을 때 */
+.div1:hover {
+    background-color: hotpink;
+    height: 150px;
+}
+
+/* 충돌이 되면 아래가 우선순위 */
+/* :active : 요소를 마우스로 클릭하고 있을 때 */
+.div1:active {
+    background-color: brown;
+    width: 150px;
+}
+
+/* :focus : 요소에 포커스가 됐을 때 */
+input:focus {
+    background-color: blueviolet;
+    outline-color: yellowgreen;
+    color: #ffffff;
+}
+
+.links > a:hover {
+    background-color: coral;
+}
+
+.links > a:visited {
+    color: #ccc;
+    /* #ccc == #cccccc */
+}
+
+/* 요소 상황에 따른 가상 선택자 */
+.zoo > * {
+    background-color: green;
+    color: white;
+}
+
+/* E:last-child : E가 마지막 요소라면 선택 */
+.zoo > li:last-child {
+    background-color: black;
+}
+
+/* E:first-child : E가 첫 요소라면 선택 */
+.zoo > *:first-child {
+    background-color: red;
+}
+
+/* E:not(xyz) : xyz가 아닌 요소 선택 */
+.zoo > *:not(div) {
+    background-color: pink;
+}
+
+/* E:nth-child(n) : E가 n번째 요소라면 선택 (n이 숫자가 아니라 수식(ex: 3n + 1)도 가능 */
+.zoo > *:nth-child(2) {
+    background-color: aqua;
+}
+/* 실습 가상클래스 선택자 */
+h1:hover {
+    color: red;
+}
+
+a:active {
+    background-color: blue;
+}
+
+input:focus {
+    background-color: orange;
+}
+/* 실습 줄무늬 만들기 */
+.stripes > *:nth-child(2n) {
+    background-color: yellow;
+    color: black;
+}
+.stripes > *:nth-child(2n + 1) {
+    background-color: navy;
+    color: white;
+}
+
+.box::before {
+    content: '택시~';
+    font-weight: bold;
+    color: red;
+}
+
+.box::after {
+    content: '빨리!!';
+    font-weight: bold;
+    color: blue !important;
+}
+
+[disabled] {
+    background-color: red;
+}
+
+[placeholder="이름"] {
+    background-color: orange;
+}
+
+input:not([placeholder]) {
+    background-color: blue;
+}
