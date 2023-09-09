@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <%- include('./includes/head', {title: 'login'})%>
+  </head>
+  <body>
+    <%- include('./includes/header')%>
+    <h1>로그인</h1>
+    <label for="id">id: </label>
+    <input type="text" id="id" />
+    <br />
+    <label for="password">password: </label>
+    <input type="text" id="password" />
+    <br />
+
+    <a href="/">로그인</a>
+    <a href="/register">회원가입</a>
+  </body>
+</html>
