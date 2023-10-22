@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>폼</title>
+  </head>
+  <body>
+    <h1><%= title %></h1>
+    <h2>GET 요청</h2>
+    <form action="/getForm" method="get">
+      <input
+        type="text"
+        name="id"
+        placeholder="ID는 최소 3글자"
+        required
+        minlength="3"
+      />
+      <input
+        type="password"
+        name="pw"
+        placeholder="PW는 최소 4글자"
+        required
+        minlength="4"
+      />
+      <input type="email" name="email" placeholder="EMAIL은 필수값" required />
+      <input type="number" name="grade" placeholder="GRADE" />
+      <button>제출</button>
+    </form>
+    <h2>post 요청</h2>
+    <!-- required 속성: 폼 요소에 값이 반드기 들어가야 하는지 여부를 결정 -->
+    <!-- pattern 속성: 폼 요소에 값 입력되었을 때 그 입력된 값에 대한 검증을 의미 -->
+    <form action="/postForm" method="post">
+      <input
+        type="text"
+        name="id"
+        placeholder="ID"
+        pattern="^([a-zA-Z0-9가-힣]{4,})$"
+        title="아이디는 대소문자, 한글, 숫자로 구성된 4자 이상의 문자여야 합니다."
+      />
+
+      <!-- pattern에 {8,12} 숫자 사이에 공백있으면 작동 안함 {8, 12}이렇게 적으면 안됨 -->
+      <input
+        type="password"
+        name="pw"
+        placeholder="PW"
+        pattern="^([a-z0-9]){8,12}$"
+        title="비밀번호는 영어 소문자와 숫자로 구성된 8자 이상 12자 이하의
+      문자여야 합니다."
+      />
+
+      <button>제출</button>
+    </form>
+    <h2>실습.get으로 정보 받기</h2>
+    <form action="/getInfo" method="get">
+      <button>이동</button>
+    </form>
+    <h2>실습2.post로 정보 받기</h2>
+    <form action="/postInfo" method="get">
+      <button>이동</button>
+    </form>
+  </body>
+</html>

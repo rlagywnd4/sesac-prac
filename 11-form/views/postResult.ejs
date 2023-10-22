@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>실습2 폼 전송 완료!</h1>
+    <ul>
+      <li>이름: <%=userInfo.name%></li>
+      <li>성별: <%=userInfo.gender%></li>
+      <li>생일: <%=userInfo.year%>-<%=userInfo.month%>-<%=userInfo.day%></li>
+      <%if(userInfo.interest) {%>
+      <li>취미: <%=userInfo.interest%></li>
+      <%}%> <%if(userInfo.color) {%>
+      <li>좋아하는 색상: <%=userInfo.color%></li>
+      <%}%> <%if(userInfo.number) {%>
+      <li>좋아하는 숫자: <%=userInfo.number%></li>
+      <%}%>
+    </ul>
+  </body>
+</html>

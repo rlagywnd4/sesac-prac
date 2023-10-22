@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>get으로 정보 받기</title>
+  </head>
+  <body>
+    <form action="">
+      <label for="name">이름</label>
+      <input type="text" name="name" />
+
+      <br />
+      <input type="radio" name="woman" id="gender" />
+      <label for="woman">여자</label>
+      <input type="radio" name="man" id="gender" />
+      <label for="man">남자</label>
+
+      <br />
+      <select name="year" id="year">
+        <%for(let i = 1980; i <= 2010; i++) {%>
+        <option value="<%=i%>"><%=i%></option>
+        <%}%>
+      </select>
+      <span>년</span>
+      <select name="month" id="month">
+        <%for(let i = 1; i <= 12; i++) {%>
+        <option value="<%=i%>"><%=i%></option>
+        <%}%></select
+      ><span>월</span>
+      <select name="day" id="day">
+        <%for(let i = 1; i <= 31; i++) {%>
+        <option value="<%=i%>"><%=i%></option>
+        <%}%></select
+      ><span>일</span>
+
+      <br />
+      <input type="checkbox" name="interest" id="travel" />
+      <label for="travel">여행</label>
+      <input type="checkbox" name="interest" id="fashion" />
+      <label for="fashion">패션</label>
+      <input type="checkbox" name="interest" id="food" />
+      <label for="food">음식</label>
+
+      <br />
+      <button>회원가입</button>
+    </form>
+  </body>
+</html>
